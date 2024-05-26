@@ -70,7 +70,7 @@ export function Home() {
          <h3 className="mt-4 text-xl mb-4">
             Plinko lets you drop a ball from top of a pyramid and multiplies your money according to the multiplier you ball hits.
         </h3>
-        <Button className="bg-green-600 hover:bg-green-900" onClick={() => navigate("/game")}>
+        <Button className="bg-green-600 hover:bg-green-900" onClick={() => navigate("/play")}>
         Play Plinko
          </Button>
         </div>
