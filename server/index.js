@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors());
 
-const TOTAL_DROPS = 17;
+const TOTAL_DROPS = 16;
 
 const MULTIPLIERS = {
     0: 16,
