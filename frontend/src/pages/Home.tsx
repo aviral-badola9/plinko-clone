@@ -1,7 +1,3 @@
-import { useEffect, useRef, useState } from "react";
-import { BallManager } from "../game/classes/BallManager";
-import { WIDTH } from "../game/constants";
-import { pad } from "../game/padding";
 import { useNavigate } from "react-router-dom";
 import { Simulate } from "../components/Simulate";
 import { Button } from "@/components/ui/button";
