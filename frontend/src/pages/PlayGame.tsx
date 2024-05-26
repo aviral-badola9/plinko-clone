@@ -38,7 +38,7 @@ export function PlayGame() {
           });
           if (ballManager) {
             ballManager.addBall(response.data.point);
-            setTotalMoney(totalMoney-10);
+            setTotalMoney((totalMoney)=>totalMoney-10);
           }
         }}
       >
