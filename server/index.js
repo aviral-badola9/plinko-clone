@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors());
 
-const TOTAL_DROPS = 16;
+const TOTAL_DROPS = 17;
 
 const MULTIPLIERS = {
     0: 16,
@@ -44,7 +44,7 @@ app.post("/playgame", (req, res) => {
     const possibleOutcomes = outcomes[index];
 
     res.send({
-        point: possibleOutcomes[Math.floor(Math.random() * possibleOutcomes.length || 0)],
+        point: possibleOutcomes[Math.floor((Math.random() * possibleOutcomes.length || 0)-1)],
         multiplier,
     });
 });
