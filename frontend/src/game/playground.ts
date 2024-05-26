@@ -41,7 +41,7 @@ export const createSinks = (): Sink[] => {
       const y = HEIGHT - 170;
       const width = sinkWidth;
       const height = width;
-      sinks.push({ x, y, width, height, multiplier: MULTIPLIERS[i+1] });
+      sinks.push({ x, y, width, height, multiplier: MULTIPLIERS[i] });
     }
 
     return sinks;

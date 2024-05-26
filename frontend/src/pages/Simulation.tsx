@@ -31,7 +31,7 @@ export function Simulation() {
     while (1) {
       i++;
       ballManager.addBall(pad(WIDTH / 2 + 20 * (Math.random() - 0.5)));
-      await new Promise((resolve) => setTimeout(resolve, 500));
+      await new Promise((resolve) => setTimeout(resolve, 50));
       console.log(outputs)
     }
   }

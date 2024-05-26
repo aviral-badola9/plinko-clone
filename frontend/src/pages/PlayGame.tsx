@@ -17,7 +17,7 @@ export function PlayGame() {
         canvasRef.current as unknown as HTMLCanvasElement,
         (index: number) => {
             setTotalMoney((totalMoney) => {
-              return totalMoney + MULTIPLIERS[index];
+              return totalMoney + (10*MULTIPLIERS[index]);
             });
           }
       );
@@ -33,12 +33,12 @@ export function PlayGame() {
         <Button
         className="px-10 mb-4 bg-green-600 hover:bg-green-900"
         onClick={async () => {
-          const response = await axios.post(`${baseURL}/game`, {
+          const response = await axios.post(`${baseURL}/playgame`, {
             data: 1,
           });
           if (ballManager) {
             ballManager.addBall(response.data.point);
-            setTotalMoney(totalMoney-1);
+            setTotalMoney(totalMoney-10);
           }
         }}
       >
