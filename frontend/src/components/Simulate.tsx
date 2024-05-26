@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import { BallManager } from "../game/classes/BallManager";
 import { pad } from "../game/padding";
@@ -7,26 +7,6 @@ import { WIDTH } from "../game/constants";
 export const Simulate = () => {
 
   const canvasRef = useRef<any>();
-  let [outputs, setOutputs] = useState<{ [key: number]: number[] }>({
-    0: [],
-    1: [],
-    2: [],
-    3: [],
-    4: [],
-    5: [],
-    6: [],
-    7: [],
-    8: [],
-    9: [],
-    10: [],
-    11: [],
-    12: [],
-    13: [],
-    14: [],
-    15: [],
-    16: [],
-    17: [],
-  });
 
   async function simulate(ballManager: BallManager) {
     let i = 0;
@@ -40,15 +20,7 @@ export const Simulate = () => {
   useEffect(() => {
     if (canvasRef.current) {
       const ballManager = new BallManager(
-        canvasRef.current as unknown as HTMLCanvasElement,
-        (index: number, startX?: number) => {
-          setOutputs((outputs: any) => {
-            return {
-              ...outputs,
-              [index]: [...(outputs[index] as number[]), startX],
-            };
-          });
-        }
+        canvasRef.current as unknown as HTMLCanvasElement
       );
       simulate(ballManager);
 
