@@ -30,7 +30,6 @@ const MULTIPLIERS = {
 
 app.post("/playgame", (req, res) => {
     let index = 0;
-    console.log('here')
     const pattern = []
     for (let i = 0; i < TOTAL_DROPS; i++) {
         if (Math.random() > 0.5) {

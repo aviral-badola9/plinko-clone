@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { MULTIPLIERS } from '../game/constants';
 
 export function PlayGame() {
-    const baseURL: string = "http://localhost:3000";
+    const baseURL: string|undefined = import.meta.env.VITE_SERVER_URL;
     const [ballManager, setBallManager] = useState<BallManager>();
     const [totalMoney, setTotalMoney] = useState<number>(1000);
     const canvasRef = useRef<any>();
